@@ -5,8 +5,9 @@ class Movie {
     public string $directorFirstName;
     public string $directorLastName;
     public int $year;
-    public string $genre;
+    public $genre;
     public float $rating;
+    public static $availableGenre =['Animazione', 'Commedia', 'Avventura', 'Horror', 'Drammatico', 'Romantico', 'Documentario'];
 
     function __construct($_title) {
         $this->title = $_title;
@@ -22,7 +23,7 @@ $movie1 = new Movie("Space Jam");
 $movie1->directorFirstName = "Joe";
 $movie1->directorLastName = "Pytka";
 $movie1->year = 1996;
-$movie1->genre = "Animazione";
+$movie1->genre = Movie::$availableGenre[0] . ', ' .  Movie::$availableGenre[1] . ', ' . Movie::$availableGenre[2];
 $movie1->rating = 6.5;
 //var_dump($movie1);
 //var_dump($movie1->getDirectorFullName());
@@ -31,7 +32,7 @@ $movie2 = new Movie("Space Jam 2 - New Legends");
 $movie2->directorFirstName = "Malcom D.";
 $movie2->directorLastName = "Lee";
 $movie2->year = 2021;
-$movie2->genre = "Animazione";
+$movie2->genre =  Movie::$availableGenre[0] . ', ' .  Movie::$availableGenre[1] . ', ' . Movie::$availableGenre[2];
 $movie2->rating = 4.5;
 //var_dump($movie2);
 //var_dump($movie2->getDirectorFullName());
@@ -85,7 +86,7 @@ $movie2->rating = 4.5;
                 <strong>Anno:</strong> <?= $movie2->year; ?>
             </li>
             <li>
-                <strong>Genere:</strong> <?= $movie2->genre; ?>
+                <strong>Genere:</strong> <?= $movie2->genre ; ?>
             </li>
             <li>
                 <strong>Valutazione:</strong> <?= $movie2->rating; ?>/10
