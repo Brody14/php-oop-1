@@ -11,6 +11,10 @@ class Movie {
     function __construct($_title) {
         $this->title = $_title;
     }
+
+    function getDirectorFullName() {
+        return $this->directorFirstName . " " . $this->directorLastName;
+    }
 }
 
 ?>
