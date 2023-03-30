@@ -7,6 +7,10 @@ class Movie {
     public int $year;
     public string $genre;
     public float $rating;
+
+    function __construct($_title) {
+        $this->title = $_title;
+    }
 }
 
 ?>
