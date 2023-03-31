@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__. './models/movie.php';
+require_once __DIR__. '/models/movie.php';
 
 $movie1 = new Movie("Space Jam");
 $movie1->directorFirstName = "Joe";
